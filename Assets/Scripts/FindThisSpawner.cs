@@ -5,6 +5,7 @@ using UnityEngine;
 public class FindThisSpawner : MonoBehaviour
 {
     public GameObject[] findThis;
+    public GameObject[] spawners;
     public static string currentObj;
     public static int i = 0;
     // Start is called before the first frame update
@@ -16,6 +17,8 @@ public class FindThisSpawner : MonoBehaviour
         Instantiate(findThis[i], pos, Quaternion.identity);
         currentObj = findThis[i].transform.tag;
         Debug.Log(currentObj);
+
+
         
     }
 
