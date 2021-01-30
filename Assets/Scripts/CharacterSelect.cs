@@ -17,6 +17,21 @@ public class CharacterSelect : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        Debug.Log("You clicked me!");
+        //Debug.Log("You clicked me!");
+        //Debug.Log(gameObject.transform.tag);
+        if (gameObject.transform.tag == FindThisSpawner.currentObj)
+        {
+            Debug.Log("Correct choice");
+            
+
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Debug.Log("Wrong Choice");
+            Timer.reduceTime -= 2;
+        }
+
+
     }
 }
