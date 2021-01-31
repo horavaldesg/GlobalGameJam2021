@@ -46,4 +46,9 @@ public class TitleMenu : MonoBehaviour
         Debug.Log("GoCredits");
         creditsMenu.SetActive(true);
     }
+
+    public void ReturnMenu()
+    {
+        SceneManager.LoadScene("TitleScene");
+    }
 }
