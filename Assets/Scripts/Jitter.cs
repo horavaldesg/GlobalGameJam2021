@@ -6,8 +6,9 @@ public class Jitter : MonoBehaviour
 {
     int x = 10;
     int y = 25;
-    int speed = 2;
+    public int speed = 2;
     Vector3 orgPos;
+
     // Start is called before the first frame update
     void Start()
     {
