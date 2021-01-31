@@ -9,16 +9,23 @@ public class CorrectSpawner : MonoBehaviour
     float randF;
     public static bool respawn = false;
     string scene;
-    int amount = 1;
-    // Start is called before the first frame update
-    
+    int amount = 0;
+
+
+    void Awake()
+    {
+        
+        amount += 1;
+    }
+
+   
+
+   
+    //...
     void Start()
     {
         scene = SceneManager.GetActiveScene().name;
-        if(SceneManager.GetActiveScene().name == "PlayScene 1")
-        {
-            amount += 1;
-        }
+        
     }
 
     // Update is called once per frame
