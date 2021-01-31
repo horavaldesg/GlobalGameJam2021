@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class TitleMenu : MonoBehaviour
 {
-
+    public GameObject optionsMenu;
+    public GameObject creditsMenu;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,14 +27,16 @@ public class TitleMenu : MonoBehaviour
 
     public void PlayMenu()
     {
-        SceneManager.LoadScene("PlayScene");
-        //optionsmenu.SetActive(false);
+        //SceneManager.LoadScene("PlayScene");
+        optionsMenu.SetActive(false);
+        creditsMenu.SetActive(false);
         Debug.Log("GoPlay");
     }
 
     public void OptionsMenu()
     {
-        SceneManager.LoadScene("OptionsScene");
+        //SceneManager.LoadScene("OptionsScene");
+        optionsMenu.SetActive(true);
         Debug.Log("GoOptions");
     }
 
@@ -41,5 +44,6 @@ public class TitleMenu : MonoBehaviour
     {
         //optionsmenu.SetActive(true);
         Debug.Log("GoCredits");
+        creditsMenu.SetActive(true);
     }
 }
