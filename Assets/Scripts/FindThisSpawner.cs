@@ -36,7 +36,7 @@ public class FindThisSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(ct);
+        //Debug.Log(ct);
         if (ct < spawners.Length-1)
         {
             b += 1;
