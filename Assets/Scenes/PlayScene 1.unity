@@ -550,6 +550,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 193b89873a8b74e95b42d2f1fc9bf56f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  correct: {fileID: 0}
+  incorrect: {fileID: 0}
+  changeScene: {fileID: 8300000, guid: 5e9e00d7e6322d74cb75aeebd494a8fc, type: 3}
 --- !u!1 &325581308
 GameObject:
   m_ObjectHideFlags: 0
@@ -1838,6 +1841,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 193b89873a8b74e95b42d2f1fc9bf56f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  correct: {fileID: 0}
+  incorrect: {fileID: 0}
+  changeScene: {fileID: 0}
 --- !u!4 &1515711534
 Transform:
   m_ObjectHideFlags: 0
