@@ -8,7 +8,9 @@ public class Timer : MonoBehaviour
     public float timer = 20;
     public static float reduceTime;
     public static float increseTime = 0;
+    public GameObject negativeTwo;
     TextMeshProUGUI text;
+    public static bool penalty = false;
     // Start is called before the first frame update
    
     void Start()
@@ -25,9 +27,20 @@ public class Timer : MonoBehaviour
         text.text = reduceTime.ToString("##");
         if(reduceTime < 0)
         {
-            Debug.Log("You didn't find the character");
+            //Debug.Log("You didn't find the character");
+            
             Time.timeScale = 0;
         }
-
+        if (penalty)
+        {
+            negativeTwo.SetActive(true);
+            StartCoroutine(HideNumber());
+        }
+    }
+    IEnumerator HideNumber()
+    {
+        yield return new WaitForSeconds(1.5f);
+        negativeTwo.SetActive(false);
+        penalty = false;
     }
 }

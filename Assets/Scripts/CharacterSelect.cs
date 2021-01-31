@@ -22,7 +22,7 @@ public class CharacterSelect : MonoBehaviour
         //Debug.Log(gameObject.transform.tag);
         if (gameObject.transform.tag == FindThisSpawner.currentObj)
         {
-            Debug.Log("Correct choice");
+            //Debug.Log("Correct choice");
             triggerAnim();
             //Time.timeScale = 0;
 
@@ -30,7 +30,8 @@ public class CharacterSelect : MonoBehaviour
         }
         else
         {
-            Debug.Log("Wrong Choice");
+            Timer.penalty = true;
+            //Debug.Log("Wrong Choice");
             Timer.reduceTime -= 2;
         }
 
@@ -40,4 +41,5 @@ public class CharacterSelect : MonoBehaviour
         anim.SetTrigger("LevelEnd");
         CorrectSpawner.respawn = true;
     }
+
 }
