@@ -28,6 +28,8 @@ public class Timer : MonoBehaviour
         if(reduceTime < 0)
         {
             //Debug.Log("You didn't find the character");
+            AudioManager.stopPlaying = true;
+            AudioManager.amountContainer = 1 ;
             SceneManager.LoadScene("EndScene");
            
             

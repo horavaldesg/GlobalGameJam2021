@@ -66,13 +66,13 @@ public class CorrectSpawner : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "PlayScene")
         {
             yield return new WaitForSeconds(0.8f);
-            AudioManager.amountContainer+= 0.1f;
+            AudioManager.amountContainer+= 0.05f;
             SceneManager.LoadScene("PlayScene 1");
         }
         else if (SceneManager.GetActiveScene().name == "PlayScene 1")
         {
             yield return new WaitForSeconds(0.8f);
-            AudioManager.amountContainer += 0.1f;
+            AudioManager.amountContainer += 0.05f;
             SceneManager.LoadScene("PlayScene");
         }
       

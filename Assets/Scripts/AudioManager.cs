@@ -28,7 +28,7 @@ public class AudioManager : MonoBehaviour
         //{
         //    audioSource.clip = sceneAudio;
         //}
-
+        
         if (stopPlaying)
         {
             StopMusic();
@@ -63,6 +63,7 @@ public class AudioManager : MonoBehaviour
     public void StopMusic()
     {
         audioSource.Stop();
+        stopPlaying = false;
     }
     
 }
