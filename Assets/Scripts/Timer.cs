@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour
 {
     public float timer = 20;
@@ -28,8 +28,9 @@ public class Timer : MonoBehaviour
         if(reduceTime < 0)
         {
             //Debug.Log("You didn't find the character");
+            SceneManager.LoadScene("EndScene");
+           
             
-            Time.timeScale = 0;
         }
         if (penalty)
         {
