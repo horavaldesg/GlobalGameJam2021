@@ -27,15 +27,18 @@ public class TitleMenu : MonoBehaviour
     {
         SceneManager.LoadScene("PlayScene");
         //optionsmenu.SetActive(false);
+        Debug.Log("GoPlay");
     }
 
     public void OptionsMenu()
     {
         SceneManager.LoadScene("OptionsScene");
+        Debug.Log("GoOptions");
     }
 
     public void CreditsMenu()
     {
         //optionsmenu.SetActive(true);
+        Debug.Log("GoCredits");
     }
 }
