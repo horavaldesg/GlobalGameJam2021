@@ -33,9 +33,9 @@ public class CorrectSpawner : MonoBehaviour
     {
         if (respawn)
         {
-            
-            //StartCoroutine(loadscene());
-            loadNewScene();
+
+            StartCoroutine(loadscene());
+            //loadNewScene();
             //RemovePrevious();
         }
        
@@ -57,9 +57,18 @@ public class CorrectSpawner : MonoBehaviour
     }
     IEnumerator loadscene()
     {
-        
-        yield return new WaitForSeconds(1);
-        SceneManager.LoadScene(scene);
+        if (SceneManager.GetActiveScene().name == "PlayScene")
+        {
+            yield return new WaitForSeconds(1);
+            SceneManager.LoadScene("PlayScene 1");
+        }
+        else if (SceneManager.GetActiveScene().name == "PlayScene 1")
+        {
+            yield return new WaitForSeconds(1);
+            SceneManager.LoadScene("PlayScene");
+        }
+      
+        //SceneManager.LoadScene(scene);
         Debug.Log("Increase time");
         
         respawn = false;
