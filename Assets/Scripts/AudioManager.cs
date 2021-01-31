@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class AudioManager : MonoBehaviour
 {
     private AudioSource audioSource;
@@ -16,12 +16,19 @@ public class AudioManager : MonoBehaviour
     }
     private void Update()
     {
-        
+        if(SceneManager.GetActiveScene().name == "TitleScene" || SceneManager.GetActiveScene().name == "PlayScene")
+        {
+            audioSource.pitch = 1;
+        }
+        else if (SceneManager.GetActiveScene().name == "EndScene")
+        {
+            audioSource.pitch = 0.8f;
+        }
         //if(audioSource.clip.name != sceneAudio.name)
         //{
         //    audioSource.clip = sceneAudio;
         //}
-       
+
         if (stopPlaying)
         {
             StopMusic();
