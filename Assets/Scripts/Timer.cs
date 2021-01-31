@@ -39,7 +39,7 @@ public class Timer : MonoBehaviour
     }
     IEnumerator HideNumber()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1);
         negativeTwo.SetActive(false);
         penalty = false;
     }
