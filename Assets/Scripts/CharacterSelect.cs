@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class CharacterSelect : MonoBehaviour
 {
-    public Animator transitionAnim;
+    public static Animator anim;
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -23,7 +23,7 @@ public class CharacterSelect : MonoBehaviour
         if (gameObject.transform.tag == FindThisSpawner.currentObj)
         {
             Debug.Log("Correct choice");
-            transitionAnim.SetTrigger("LevelEnd");
+            triggerAnim();
             //Time.timeScale = 0;
 
             //yield return new WaitForSeconds(1.5f);
@@ -34,5 +34,10 @@ public class CharacterSelect : MonoBehaviour
             Timer.reduceTime -= 2;
         }
 
+    }
+    public void triggerAnim()
+    {
+        anim.SetTrigger("LevelEnd");
+        CorrectSpawner.respawn = true;
     }
 }

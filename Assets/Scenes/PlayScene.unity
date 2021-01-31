@@ -361,7 +361,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 193b89873a8b74e95b42d2f1fc9bf56f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionAnim: {fileID: 249579245}
 --- !u!1 &385802009
 GameObject:
   m_ObjectHideFlags: 0
@@ -843,6 +842,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1515711534}
   - component: {fileID: 1515711533}
+  - component: {fileID: 1515711535}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -862,7 +862,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 193b89873a8b74e95b42d2f1fc9bf56f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionAnim: {fileID: 0}
 --- !u!4 &1515711534
 Transform:
   m_ObjectHideFlags: 0
@@ -877,6 +876,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1515711535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515711532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9f2288ce7bf14542bbd6f9d0a51d973, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transitionAnim: {fileID: 249579245}
 --- !u!1 &1578475648
 GameObject:
   m_ObjectHideFlags: 0
@@ -1134,6 +1146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68ec05bd6af9d440bb5bb4a092c6c213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerObj: {fileID: 1628517013}
   timer: 20
 --- !u!1 &1939809872
 GameObject:

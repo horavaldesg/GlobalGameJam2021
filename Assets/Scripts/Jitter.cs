@@ -25,13 +25,14 @@ public class Jitter : MonoBehaviour
 
         transform.position = new Vector2(transform.position.x + (movementPerSecond.x * Time.deltaTime),
         transform.position.y + (movementPerSecond.y * Time.deltaTime));
-
+        //transform.position = new Vector2(transform.position.x + (movementPerSecond.x * Time.deltaTime), transform.position.y);
+        transform.Rotate(0,0,2);
         //transform.position += Vector3.right * speed * Time.deltaTime;
         //transform.position += Vector3.up * speed * Time.deltaTime;
 
         if (transform.position.x > x || transform.position.x < -x || transform.position.y > y || transform.position.y < -y + 2)
         {
-            transform.position = new Vector3(orgPos.x, orgPos.y, transform.position.z);
+            transform.position = new Vector3(orgPos.x - 2, orgPos.y - 2, transform.position.z);
         }
 
 

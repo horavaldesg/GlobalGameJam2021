@@ -7,11 +7,14 @@ public class Timer : MonoBehaviour
 {
     public float timer = 20;
     public static float reduceTime;
+    public static float increseTime = 0;
     TextMeshProUGUI text;
     // Start is called before the first frame update
+   
     void Start()
     {
         reduceTime = timer;
+        
         text = GetComponent<TextMeshProUGUI>();
     }
 
