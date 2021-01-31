@@ -30,6 +30,7 @@ public class CharacterSelect : MonoBehaviour
         }
         else
         {
+            Timer.penalty = true;
             //Debug.Log("Wrong Choice");
             Timer.reduceTime -= 2;
         }
@@ -40,4 +41,5 @@ public class CharacterSelect : MonoBehaviour
         anim.SetTrigger("LevelEnd");
         CorrectSpawner.respawn = true;
     }
+
 }

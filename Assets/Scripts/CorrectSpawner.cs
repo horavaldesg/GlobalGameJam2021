@@ -6,6 +6,7 @@ public class CorrectSpawner : MonoBehaviour
 {
     int x = 0;
     public GameObject obj;
+    
     float randF;
     public static bool respawn = false;
     string scene;
