@@ -9,13 +9,15 @@ public class CorrectSpawner : MonoBehaviour
     float randF;
     public static bool respawn = false;
     string scene;
-    int amount = 0;
+    float amount = 0;
 
 
     void Awake()
     {
-        
-        amount += 1;
+
+
+        amount = AudioManager.amountContainer;
+        Debug.Log(AudioManager.amountContainer);
     }
 
    
@@ -25,6 +27,7 @@ public class CorrectSpawner : MonoBehaviour
     void Start()
     {
         scene = SceneManager.GetActiveScene().name;
+        
         
     }
 
@@ -43,7 +46,8 @@ public class CorrectSpawner : MonoBehaviour
     }
     public void loadNewScene()
     {
-        if(SceneManager.GetActiveScene().name == "PlayScene")
+        
+        if (SceneManager.GetActiveScene().name == "PlayScene")
         {
             SceneManager.LoadScene("PlayScene 1");
         }
@@ -57,19 +61,22 @@ public class CorrectSpawner : MonoBehaviour
     }
     IEnumerator loadscene()
     {
+        
         if (SceneManager.GetActiveScene().name == "PlayScene")
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.8f);
+            AudioManager.amountContainer+= 0.1f;
             SceneManager.LoadScene("PlayScene 1");
         }
         else if (SceneManager.GetActiveScene().name == "PlayScene 1")
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.8f);
+            AudioManager.amountContainer += 0.1f;
             SceneManager.LoadScene("PlayScene");
         }
       
         //SceneManager.LoadScene(scene);
-        Debug.Log("Increase time");
+        //Debug.Log("Increase time");
         
         respawn = false;
     }

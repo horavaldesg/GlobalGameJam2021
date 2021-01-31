@@ -25,7 +25,7 @@ public class Timer : MonoBehaviour
         text.text = reduceTime.ToString("##");
         if(reduceTime < 0)
         {
-            Debug.Log("You didn't find the character");
+            //Debug.Log("You didn't find the character");
             Time.timeScale = 0;
         }
 

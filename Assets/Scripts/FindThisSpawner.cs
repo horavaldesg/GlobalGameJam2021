@@ -11,20 +11,17 @@ public class FindThisSpawner : MonoBehaviour
     public static int i = 0;
     int b;
     int ct;
-    private void Awake()
-    {
-        DontDestroyOnLoad(transform.gameObject);
-    }
+    
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(i);
+        //Debug.Log(i);
         i = Random.Range(0, findThis.Length);
         Vector3 pos = new Vector3(transform.position.x, transform.position.y, -1.6f);
         GameObject obj = Instantiate(findThis[i], pos, Quaternion.identity);
         obj.GetComponent<Jitter>().enabled = false;
         currentObj = findThis[i].transform.tag;
-        Debug.Log(currentObj);
+        //Debug.Log(currentObj);
         
         spawners[i].GetComponent<CorrectSpawner>().OneSpawn();
         

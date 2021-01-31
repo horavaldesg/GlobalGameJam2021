@@ -7,14 +7,16 @@ public class AudioManager : MonoBehaviour
     private AudioSource audioSource;
     public static bool stopPlaying;
     public static bool reloadScene =false;
-    public static AudioClip sceneAudio;
+    public static float amountContainer = 1;
+    //public static AudioClip sceneAudio;
     // Start is called before the first frame update
     void Start()
     {
-        
+        //amountContainer = CorrectSpawner.amount;
     }
     private void Update()
     {
+        
         //if(audioSource.clip.name != sceneAudio.name)
         //{
         //    audioSource.clip = sceneAudio;

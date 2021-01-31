@@ -22,7 +22,7 @@ public class CharacterSelect : MonoBehaviour
         //Debug.Log(gameObject.transform.tag);
         if (gameObject.transform.tag == FindThisSpawner.currentObj)
         {
-            Debug.Log("Correct choice");
+            //Debug.Log("Correct choice");
             triggerAnim();
             //Time.timeScale = 0;
 
@@ -30,7 +30,7 @@ public class CharacterSelect : MonoBehaviour
         }
         else
         {
-            Debug.Log("Wrong Choice");
+            //Debug.Log("Wrong Choice");
             Timer.reduceTime -= 2;
         }
 
