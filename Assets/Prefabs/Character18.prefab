@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 3807800769313493199}
   - component: {fileID: 3807800769313493197}
   - component: {fileID: 1390413947993297285}
-  - component: {fileID: -2970920154211610632}
+  - component: {fileID: 3112051453816470749}
   m_Layer: 0
-  m_Name: Character 3
-  m_TagString: 3
+  m_Name: Character18
+  m_TagString: 18
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0acf16eb921e330419c933b5a2ae6a5d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2c3be3d8045bdc14a9d65acf8dc6f041, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
---- !u!58 &-2970920154211610632
+--- !u!58 &3112051453816470749
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,6 +122,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0023100376, y: 0}
   serializedVersion: 2
-  m_Radius: 0.55
+  m_Radius: 0.53533673

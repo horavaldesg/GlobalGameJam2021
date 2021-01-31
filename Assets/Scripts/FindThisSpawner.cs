@@ -16,7 +16,7 @@ public class FindThisSpawner : MonoBehaviour
     {
         Debug.Log(i);
         i = Random.Range(0, findThis.Length);
-        Vector3 pos = new Vector3(transform.position.x, transform.position.y, 0.1f);
+        Vector3 pos = new Vector3(transform.position.x, transform.position.y, -1.6f);
         GameObject obj = Instantiate(findThis[i], pos, Quaternion.identity);
         obj.GetComponent<Jitter>().enabled = false;
         currentObj = findThis[i].transform.tag;

@@ -32,7 +32,7 @@ public class Jitter : MonoBehaviour
 
         if (transform.position.x > x || transform.position.x < -x || transform.position.y > y || transform.position.y < -y + 2)
         {
-            transform.position = new Vector3(orgPos.x - 2, orgPos.y - 2, transform.position.z);
+            transform.position = new Vector3(orgPos.x , orgPos.y , transform.position.z);
         }
 
 

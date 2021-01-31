@@ -54,7 +54,7 @@ public class CorrectSpawner : MonoBehaviour
     public void OneSpawn()
     {
         GameObject spwnObj = Instantiate(obj);
-        spwnObj.transform.position = new Vector3(Random.Range(-3, 3) + randF, Random.Range(4, -2) + randF, 0);
+        spwnObj.transform.position = new Vector3(0,0, 0);
     }
     public void MultiSpawn()
     {
@@ -63,7 +63,7 @@ public class CorrectSpawner : MonoBehaviour
         {
 
             GameObject spwnObj = Instantiate(obj);
-            spwnObj.transform.position = new Vector3(-3, Random.Range(4, -2) + randF, 0);
+            spwnObj.transform.position = new Vector3(0, 0, 0);
             
             
         }
