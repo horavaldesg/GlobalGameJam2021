@@ -11,6 +11,10 @@ public class FindThisSpawner : MonoBehaviour
     public static int i = 0;
     int b;
     int ct;
+    private void Awake()
+    {
+        DontDestroyOnLoad(transform.gameObject);
+    }
     // Start is called before the first frame update
     void Start()
     {

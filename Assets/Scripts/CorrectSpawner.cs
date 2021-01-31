@@ -9,10 +9,16 @@ public class CorrectSpawner : MonoBehaviour
     float randF;
     public static bool respawn = false;
     string scene;
+    int amount = 1;
     // Start is called before the first frame update
+    
     void Start()
     {
         scene = SceneManager.GetActiveScene().name;
+        if(SceneManager.GetActiveScene().name == "PlayScene 1")
+        {
+            amount += 1;
+        }
     }
 
     // Update is called once per frame
@@ -21,13 +27,26 @@ public class CorrectSpawner : MonoBehaviour
         if (respawn)
         {
             
-            StartCoroutine(loadscene());
+            //StartCoroutine(loadscene());
+            loadNewScene();
             //RemovePrevious();
+        }
+       
+       
+    }
+    public void loadNewScene()
+    {
+        if(SceneManager.GetActiveScene().name == "PlayScene")
+        {
+            SceneManager.LoadScene("PlayScene 1");
+        }
+        else if(SceneManager.GetActiveScene().name == "PlayScene 1")
+        {
+            SceneManager.LoadScene("PlayScene");
         }
         
         
-
-       
+        respawn = false;
     }
     IEnumerator loadscene()
     {
@@ -59,7 +78,7 @@ public class CorrectSpawner : MonoBehaviour
     public void MultiSpawn()
     {
         randF = Random.Range(-0.5f, 0.5f);
-        for(int i = 0; i < 15; i++)
+        for(int i = 0; i < amount; i++)
         {
 
             GameObject spwnObj = Instantiate(obj);
